@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/create.css">
+    <link rel="stylesheet" href="styles/countdown.css">
+    <title>Document</title>
+    <style type="text/css">
+        .create-button {
+        }
+    </style>
+</head>
+<body>
+<div class="main-content">
+    <main class="content">
+        <div class="create-block" id="create-block">
+        <p>To create an event, please click the button.</p>
+        <button class="create-button" onclick="showPrompt()">Create Event</button>
+        </div>
+        <div class="remaining-time" id="remaining-time">
+
+            <div class="time-block"><label id="days-left-label"></label>
+                <label class="time-left-label">DAYS</label></div>
+            <div class="time-block"><label id="hours-left-label"></label>
+                <label class="time-left-label">HOURS</label></div>
+            <div class="time-block"><label id="minutes-left-label"></label>
+                <label class="time-left-label">MINUTES</label></div>
+            <div class="time-block"><label id="seconds-left-label"></label>
+                <label class="time-left-label">SECONDS</label></div>
+        </div>
+    </main>
+
+</div>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/prompt.js" type="module"></script>
+
+</body>
+</html>

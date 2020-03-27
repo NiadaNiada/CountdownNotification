@@ -1,0 +1,24 @@
+.create-block {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.create-block p {
+    color: white;
+}
+
+.create-button {
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: aliceblue;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+.create-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.3), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
