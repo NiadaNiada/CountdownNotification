@@ -9,7 +9,7 @@ export function isValidDate(str) {
 
     if (parts) {
         let date = new Date ( (+parts[3]), (+parts[1])-1, (+parts[2]), (+parts[4]), (+parts[5]), (+parts[6]) );
-        if ( ( date.getDate() === parts[2] ) && ( date.getMonth() === parts[1]-1 ) && ( date.getFullYear() === parts[3] ) ) {
+        if ( ( date.getDate() == parts[2] ) && ( date.getMonth() == parts[1]-1 ) && ( date.getFullYear() == parts[3] ) ) {
             return date;
         }
     }
