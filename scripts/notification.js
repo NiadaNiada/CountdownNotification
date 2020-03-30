@@ -1,5 +1,3 @@
-import {promptInfo} from "./variables.js";
-
 export function checkPermission() {
     if (!window.Notification) {
         console.log('Browser does not support notifications.');
@@ -24,9 +22,9 @@ export function checkPermission() {
     }
 }
 
-export function notify() {
+export function notify(message) {
     let notify = new Notification('Your event', {
-        body: `${promptInfo.eventMessage}`,
+        body: `${message}`,
         icon: "https://getdrawings.com/free-icon/ufo-icon-57.png",
     });
     setTimeout(notify.close.bind(notify),7000);

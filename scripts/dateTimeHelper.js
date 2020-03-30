@@ -1,5 +1,3 @@
-import {promptInfo} from "./variables.js";
-
 export function isValidDate(str) {
 
     // mm-dd-yyyy hh:mm:ss
@@ -45,7 +43,7 @@ export function convertMillisecondsToDate( milliSeconds ){
     return {days,hours,minutes,seconds};
 }
 
-export function timeLeftInMilliseconds() {
+export function timeLeftInMilliseconds(targetDate) {
     let today = new Date();
-    return promptInfo.eventDate.getTime() - today.getTime();
+    return targetDate.getTime() - today.getTime();
 }

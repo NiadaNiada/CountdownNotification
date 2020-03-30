@@ -1,9 +1,8 @@
 import {isValidDate, convertMillisecondsToDate, timeLeftInMilliseconds} from "./dateTimeHelper.js";
-import {promptInfo} from "./variables.js";
 import {checkPermission, notify} from "./notification.js";
 
-
 export function showPrompt(){
+    let promptInfo = {};
     let date = window.prompt("Please enter the date and the time for the event with format mm-dd-yyyy hh:mm").toString();
     while (!isValidDate(date)){
         date = window.prompt("Please enter the valid date and the time with format mm-dd-yyyy hh:mm").toString();
@@ -11,13 +10,13 @@ export function showPrompt(){
     promptInfo.eventDate = new Date(date);
     promptInfo.eventMessage = window.prompt("Please enter the message for the event").toString();
     checkPermission();
-    startCountdown();
+    startCountdown(promptInfo);
 }
 
 
-function startCountdown() {
+function startCountdown(promptInfo) {
     let timeInterval = setInterval(function () {
-        let time = convertMillisecondsToDate(timeLeftInMilliseconds());
+        let time = convertMillisecondsToDate(timeLeftInMilliseconds(promptInfo.eventDate));
         JSON.stringify(time);
         if (!(time.days === 0 && time.hours === 0 && time.minutes === 0 && time.seconds === 0)) {
             updateUI(time);
@@ -28,7 +27,7 @@ function startCountdown() {
             document.getElementById("remaining-time").style.display = "none";
             document.getElementById("create-block").style.display = "flex";
             clearInterval(timeInterval);
-            notify();
+            notify(promptInfo.eventMessage);
         }
     }, 500);
 }
