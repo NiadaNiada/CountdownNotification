@@ -11,19 +11,33 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/create.css">
     <link rel="stylesheet" href="styles/countdown.css">
+    <link rel="stylesheet" href="styles/form.css">
     <title>Document</title>
     <style type="text/css">
-        .create-button {
-        }
     </style>
 </head>
 <body>
 <div class="main-content">
     <main class="content">
+
         <div class="create-block" id="create-block">
         <p>To create an event, please click the button.</p>
-        <button class="create-button" onclick="showPrompt()">Create Event</button>
+        <button class="create-button" id="show-form">Create Event</button>
         </div>
+        <div class="container" id="container">
+<div class="input-block" id="date-input-block">
+            <label for="datetime">Event Date and Time:</label>
+            <input id="datetime" name="datetime" placeholder="Date.." type="datetime-local" required>
+</div>
+            <div class="input-block" id="message-input-block">
+            <label for="eventmessage">Event Message:</label>
+            <textarea id="eventmessage" name="eventmessage" placeholder="Event message.." style="height:200px"
+                      type="text" required></textarea>
+            </div>
+                <button class="create-button" id="create-button" onclick="startCountdown()">Submit Event</button>
+
+        </div>
+
         <div class="remaining-time" id="remaining-time">
 
             <div class="time-block"><label id="days-left-label"></label>
@@ -38,8 +52,8 @@
     </main>
 
 </div>
-<script src="./scripts/index.js"></script>
-<script src="./scripts/prompt.js" type="module"></script>
+<script src="./scripts/index.js" type="module"></script>
+<script src="scripts/constants.js"></script>
 
 </body>
 </html>
