@@ -43,4 +43,3 @@ function startCountdown() {
     }
 }
 
-//window.showForm = showForm;

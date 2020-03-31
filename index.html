@@ -25,21 +25,19 @@
         <button class="create-button" id="show-form">Create Event</button>
         </div>
         <div class="container" id="container">
-<div class="input-block" id="date-input-block">
+    <div class="input-block" id="date-input-block">
             <label for="datetime">Event Date and Time:</label>
             <input id="datetime" name="datetime" placeholder="Date.." type="datetime-local" required>
-</div>
+    </div>
             <div class="input-block" id="message-input-block">
             <label for="eventmessage">Event Message:</label>
             <textarea id="eventmessage" name="eventmessage" placeholder="Event message.." style="height:200px"
                       type="text" required></textarea>
             </div>
-                <button class="create-button" id="create-button" onclick="startCountdown()">Submit Event</button>
-
+                <button class="create-button" id="create-button">Submit Event</button>
         </div>
 
         <div class="remaining-time" id="remaining-time">
-
             <div class="time-block"><label id="days-left-label"></label>
                 <label class="time-left-label">DAYS</label></div>
             <div class="time-block"><label id="hours-left-label"></label>
@@ -53,7 +51,7 @@
 
 </div>
 <script src="./scripts/index.js" type="module"></script>
-<script src="scripts/constants.js"></script>
+<script src="scripts/constants.js" type="module"></script>
 
 </body>
 </html>
