@@ -1,0 +1,11 @@
+@media screen and (max-width: 968px) {
+   .create-block p, .create-button, .input-block{
+       font-size: 1.5rem;
+   }
+}
+
+@media screen and (max-width: 600px){
+    .create-block p, .create-button, .input-block{
+        font-size: 1.4rem;
+    }
+}

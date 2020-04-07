@@ -3,8 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
+
 }
 
 .input-block {
@@ -51,4 +52,9 @@ input textarea:invalid {
 
 input:valid {
     border: 2px solid black;
+}
+
+.box-form {
+
+
 }
